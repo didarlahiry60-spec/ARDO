@@ -76,7 +76,7 @@ export const CartProvider = ({ children }) => {
     if (typeof window === 'undefined') return false;
     const pathname = window.location.pathname;
     const hash = window.location.hash;
-    return pathname === '/admin' || pathname.startsWith('/admin/') || hash === '#admin';
+    return pathname === '/admin' || pathname.startsWith('/admin/') || pathname.endsWith('/admin') || pathname.includes('/admin') || hash === '#admin';
   };
 
   const [isAdminOpen, setIsAdminOpenState] = useState(checkIsAdmin);
@@ -84,17 +84,17 @@ export const CartProvider = ({ children }) => {
   const setIsAdminOpen = (open) => {
     setIsAdminOpenState(open);
     if (typeof window !== 'undefined') {
+      const baseUrl = import.meta.env.BASE_URL || '/';
+      const cleanBase = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
       if (open) {
-        if (window.location.pathname !== '/admin') {
-          try {
-            window.history.pushState(null, '', '/admin');
-          } catch (e) {
-            window.location.hash = 'admin';
-          }
+        try {
+          window.history.pushState(null, '', cleanBase + 'admin');
+        } catch (e) {
+          window.location.hash = 'admin';
         }
       } else {
         try {
-          window.history.pushState(null, '', '/');
+          window.history.pushState(null, '', cleanBase);
         } catch (e) {
           window.location.hash = '';
         }
