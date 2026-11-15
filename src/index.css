@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Hind Siliguri', 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #F2EBDD;
+    color: #25231F;
+    overflow-x: hidden;
+  }
+
+  /* Custom Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F2EBDD;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #AD946A;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8e744d;
+  }
+}
+
+.serif-title {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  letter-spacing: 0.12em;
+}
+
+.bengali-title {
+  font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+}
+
+/* Subtle luxury gold border accent */
+.gold-border {
+  border-color: #AD946A;
+}
+
+.gold-gradient-line {
+  background: linear-gradient(90deg, transparent, #AD946A, transparent);
+}

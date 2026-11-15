@@ -1,0 +1,17 @@
+{
+  "deliveryDhaka": 80,
+  "deliveryOutside": 130,
+  "freeDeliveryThreshold": 5000,
+  "bkashNumber": "01700-000000",
+  "nagadNumber": "01800-000000",
+  "whatsappNumber": "8801631188500",
+  "adminPin": "didar1122",
+  "securityQuestion": "আপনার প্রিয় মানুষের নাম কী?",
+  "securityAnswer": "didaroshi",
+  "telegramBotToken": "",
+  "telegramChatId": "",
+  "announcementText": {
+    "bn": "সারা বাংলাদেশে ক্যাশ অন ডেলিভারি | ঢাকার ভেতরে ৮০৳, বাইরে ১৩০৳",
+    "en": "Cash on Delivery All Over Bangladesh | Dhaka 80৳, Outside 130৳"
+  }
+}
